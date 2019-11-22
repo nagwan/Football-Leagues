@@ -1,8 +1,6 @@
 import Leagues from '../components/leagues/index'
 import League from '../components/leagues/show'
-import Teams from '../components/teams/index'
 import Team from '../components/teams/show'
-import TeamPlayers from '../components/players/index'
 
 export default [
     {
@@ -11,23 +9,13 @@ export default [
         component: Leagues,
     },
     {
-        path: '/:name',
+        path: '/:name/:id',
         exact: true,
         component: League,
     },
     {
-        path: '/:name/teams',
-        exact: true,
-        component: Teams,
-    },
-    {
-        path: '/:name/teams/:team_name',
+        path: '/:name/:id/:team_name/:team_id',
         exact: true,
         component: Team,
     },
-    {
-        path: '/:name/teams/:team_name',
-        component: TeamPlayers,
-    },
-
 ]

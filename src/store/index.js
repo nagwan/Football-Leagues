@@ -3,8 +3,6 @@ import createSagaMiddleware from "redux-saga"
 import root from "./root-saga.js"
 
 import Leagues from './modules/leagues/reducer'
-import Teams from './modules/teams/reducer'
-
 
 const sagaMiddleware = createSagaMiddleware()
 const composeEnhancers =
@@ -18,8 +16,7 @@ const enhancer = composeEnhancers(
 );
 
 const reducers = combineReducers({
-    Leagues,
-    Teams
+    Leagues
 })
 
 const store = createStore(
