@@ -2,15 +2,14 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Routes from './routes';
 import NotFound from '../pages/404';
-import Navbar from '../components/partials/navbar'
-
+import Navbar from '../components/partials/site-nav'
 
 const ManiRouter = (() => {
     return (
         <div id='root'>
             <BrowserRouter>
                 <Navbar />
-                <div className='container m-b-30'>
+                <div className='container'>
                     <Switch>
                         {
                             Routes.map((route, index) => (
