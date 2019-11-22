@@ -9,6 +9,8 @@
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
     "node-sass": "^4.13.0",
+    "pace": "0.0.4",
+    "pace-js": "^1.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-redux": "^7.1.3",
