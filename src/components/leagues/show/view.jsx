@@ -1,7 +1,8 @@
 import React from 'react'
 import HorizontalCard from '../../partials/league-horizontal-card'
-import Card from '../../partials/team-card'
+import Card from '../../partials/card'
 import { Link } from 'react-router-dom';
+import Logo from '../../../assets/images/team.png'
 
 const View = (({ league, teams }) => {
     return (
@@ -19,7 +20,11 @@ const View = (({ league, teams }) => {
                     teams.map(team =>
                         <div className='col-12 col-md-6 col-lg-4 m-t-10 m-b-10' key={team.id}>
                             <Link to={`/${league.name}/${league.id}/${team.tla}/${team.id}`}>
-                                <Card team={team} />
+                                <Card img={Logo} data={{
+                                    name: team.name,
+                                    position: team.area.name,
+                                    extraInfo: team.website
+                                }} />
                             </Link>
                         </div>
                     )

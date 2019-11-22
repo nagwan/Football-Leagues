@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from '../../assets/images/images.png'
+import Logo from '../../assets/images/league.png'
 
 const HorizontalCard = (({ league }) => {
     return (

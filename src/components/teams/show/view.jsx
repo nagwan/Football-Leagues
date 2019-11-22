@@ -1,7 +1,7 @@
 import React from 'react'
 import HorizontalCard from '../../partials/team-horizontal-card'
-import Card from '../../partials/player-card'
-
+import Card from '../../partials/card'
+import Avatar from '../../../assets/images/avatar.jpg'
 
 const View = (({ team }) => {
     return (
@@ -18,7 +18,11 @@ const View = (({ team }) => {
                 {
                     team.squad.map(player =>
                         <div className='col-12 col-md-6 col-lg-4 m-t-10 m-b-10' key={player.id}>
-                            <Card player={player} />
+                            <Card img={Avatar} data={{
+                                    name: player.name,
+                                    position: player.position,
+                                    extraInfo: player.nationality
+                                }} />
                         </div>
                     )
                 }
