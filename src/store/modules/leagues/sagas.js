@@ -9,18 +9,13 @@ export function* watchFetchLeagues(){
 export function* index(action){
 
     try {
-        console.log('here')
-
         const leagues = yield call(api, `http://api.football-data.org/v2/competitions`, null, 'get')
-
-        console.log(leagues.data.competitions[1], 'leagues response')
 
         yield put(actions.fetchLeagues(leagues.data.competitions))
         
-        
     } catch (error) {
-        console.log('here error', error)
         
+        console.log(error) 
     }
 
 }

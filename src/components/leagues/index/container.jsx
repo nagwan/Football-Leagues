@@ -16,7 +16,7 @@ class Container extends Component {
         return (
             <React.Fragment>
                 {
-                    this.props.Leagues.leagues.length ? <View data={this.props.Leagues.leagues}  /> : 'There is no data to show'
+                    this.props.Leagues.leagues.length ? <View leagues={this.props.Leagues.leagues}  /> : 'There is no data to show'
                 }
             </React.Fragment>
         )

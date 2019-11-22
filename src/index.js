@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import store from './store';
 import Routes from './router'
 import './assets/sass/main.sass'
+import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css'
 
 render(
     <Provider store={store}>
