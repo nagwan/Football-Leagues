@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import createSagaMiddleware from "redux-saga"
-//import root from "./root-saga.js"
+import root from "./root-saga.js"
 
 import Leagues from './modules/leagues/reducer'
 import Teams from './modules/teams/reducer'
@@ -27,7 +27,7 @@ const store = createStore(
     enhancer
 );
 
-//sagaMiddleware.run(root)
+sagaMiddleware.run(root)
 
 export default store;
 
