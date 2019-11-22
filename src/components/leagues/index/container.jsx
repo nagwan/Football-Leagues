@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import View from './view';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { withRouter } from 'react-router-dom'
 import { fetchLeaguesFlag } from '../../../store/modules/leagues/actions'
 
 class Container extends Component {
@@ -12,11 +11,11 @@ class Container extends Component {
     }
 
     render() {
-        
+
         return (
             <React.Fragment>
                 {
-                    this.props.Leagues.leagues.length ? <View leagues={this.props.Leagues.leagues}  /> : 'There is no data to show'
+                    this.props.Leagues.leagues.length ? <View leagues={this.props.Leagues.leagues} /> : 'There is no data to show'
                 }
             </React.Fragment>
         )
@@ -24,5 +23,5 @@ class Container extends Component {
     }
 }
 
-export default withRouter(connect(({ Leagues }) => ({ Leagues }),
-    dispatch => bindActionCreators({ fetchLeaguesFlag }, dispatch))(Container))
+export default connect(({ Leagues }) => ({ Leagues }),
+    dispatch => bindActionCreators({ fetchLeaguesFlag }, dispatch))(Container)
